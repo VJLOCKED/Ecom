@@ -1,97 +1,118 @@
-
+/* Product Detail Container */
 .product-detail {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    font-family: Arial, sans-serif;
-    overflow: hidden;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.product-detail-content {
+  max-width: 800px;
+  margin-left: 20px;
+}
+
+.bor{
+  border:  solid black;
+  text-align: center;
+
+}
+/* Image Container */
+.image-container {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Details Container */
+.product-detail-content {
+  flex: 2;
+  max-width: 600px;
+}
+
+.product-detail-content h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-detail-content .price {
+  font-size: 24px;
+  color: #e91e63;
+  margin-bottom: 20px;
+}
+
+.product-detail-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.product-detail-content .product-tags, 
+.product-detail-content .product-dimensions, 
+.product-detail-content .product-reviews {
+  margin-bottom: 20px;
+}
+
+.product-detail-content .product-tags h3, 
+.product-detail-content .product-dimensions h3, 
+.product-detail-content .product-reviews h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.product-detail-content .product-tags ul, 
+.product-detail-content .product-reviews .review {
+  padding-left: 20px;
+}
+
+.product-detail-content .product-tags li, 
+.product-detail-content .product-reviews .review {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #666;
+}
+
+.product-detail-content .product-reviews .review {
+  border-left: 3px solid #007bff;
+  padding-left: 10px;
+}
+
+.product-detail-content .product-reviews .review .reviewer-name {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .product-detail img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .back-button {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  .back-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .product-detail h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #333333;
-    word-wrap: break-word;
-  }
-  
-  .product-detail p {
-    margin: 10px 0;
-    font-size: 16px;
-    color: #555555;
-    line-height: 1.6;
-  }
-  
-  .product-detail .price {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000000;
-    margin-bottom: 20px;
-  }
-  
-  .product-detail h3 {
+
+  .product-detail-content {
+    margin-left: 0;
     margin-top: 20px;
-    font-size: 20px;
-    color: #333333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
+    text-align: center;
   }
-  
-  .product-tags ul, .product-reviews .review {
-    list-style-type: none;
-    padding: 0;
+
+  .image-container {
+    max-width: 100%;
   }
-  
-  .product-tags li, .product-reviews .review {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-radius: 5px;
-  }
-  
-  .product-dimensions p, .product-reviews .review p {
-    margin: 5px 0;
-  }
-  
-  .product-reviews .review {
-    border: 1px solid #dee2e6;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .product-reviews .review p {
-    color: #333333;
-  }
-  
-  .product-reviews .review .reviewer-name {
-    font-weight: bold;
-  }
-  
+}
+
