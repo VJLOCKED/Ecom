@@ -1,0 +1,42 @@
+.search-bar {
+    position: relative; /* Ensure relative positioning for absolute child */
+  }
+  
+  .search-bar input[type="text"] {
+    padding: 8px 16px; /* Padding for input text */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Font size */
+    outline: none; /* Remove default outline */
+    width: 200px; /* Adjust width as needed */
+    color: black; /* Text color */
+  }
+  
+  .search-bar button {
+    position: absolute; /* Absolute positioning for button */
+    top: 50%; /* Center vertically */
+    right: 8px; /* Adjust right spacing */
+    transform: translateY(-50%); /* Center vertically */
+    background-color: transparent; /* Button background color */
+    color: black; /* Button text color */
+    border: none; /* Remove border */
+    padding: 8px; /* Padding for button */
+    cursor: pointer; /* Cursor style */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .search-bar button:hover {
+    background-color: #0056b3; /* Hover background color */
+  }
+  
+  /* Adjust SVG icon color */
+  .search-bar button svg {
+    fill: black;
+    width: 16px; /* Adjust icon size */
+    height: 16px;
+  }
+  
+  /* Ensure the icon is centered vertically */
+  .search-bar button svg {
+    vertical-align: middle;
+  }

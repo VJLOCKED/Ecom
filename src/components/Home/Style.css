@@ -1,91 +1,110 @@
-/* body, html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-  }
-  
-  .app {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .product-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    width: 300px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05);
-  }
-  
-  .product-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .product-info {
-    padding: 15px;
-  }
-  
-  .product-info h3 {
-    margin: 0 0 10px;
-    font-size: 1.2em;
-  }
-  
-  .product-info p {
-    margin: 5px 0;
-  }
-   */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: rgb(201, 149, 149);
+}
 
-   body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  .app {
-    text-align: center;
-  }
-  
-  /* Navbar styling */
+.app {
+  text-align: center;
+}
+
+/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background-color: #333;
+  padding: 10px 20px; /* Adjust padding as needed */
+  background-color: rgb(206, 218, 171);
   color: white;
 }
 
 .logo {
-  flex: 1;
+  display: flex;
+  align-items: center; /* Center logo vertically */
+}
+
+.logo a {
+  text-decoration: none;
+  color: black;
 }
 
 .nav-links {
   display: flex;
-  flex: 2;
-  justify-content: center;
+  align-items: center; /* Center items vertically */
+  gap: 20px; /* Add gap between items */
 }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  padding: 0 1rem;
+.nav-links input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  width: 200px; /* Adjust width as needed */
+}
+
+.nav-links input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff; /* Highlight border color on focus */
+}
+
+.nav-links button {
+  background-color: transparent;
+  color: rgb(12, 2, 2);
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.nav-links button:hover {
+  background-color: orange; /* Darker shade on hover */
+}
+
+.search-bar {
+  position: relative; /* Ensure relative positioning for absolute child */
+}
+
+.search-bar input[type="text"] {
+  padding: 8px 16px; /* Padding for input text */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 14px; /* Font size */
+  outline: none; /* Remove default outline */
+  width: 200px; /* Adjust width as needed */
+  color: black; /* Text color */
+}
+
+.search-bar button {
+  position: absolute; /* Absolute positioning for button */
+  top: 50%; /* Center vertically */
+  right: 8px; /* Adjust right spacing */
+  transform: translateY(-50%); /* Center vertically */
+  background-color: transparent; /* Button background color */
+  color: black; /* Button text color */
+  border: none; /* Remove border */
+  padding: 8px; /* Padding for button */
+  cursor: pointer; /* Cursor style */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.search-bar button:hover {
+  background-color: #0056b3; /* Hover background color */
+}
+
+/* Adjust SVG icon color */
+.search-bar button svg {
+  fill: black;
+  width: 16px; /* Adjust icon size */
+  height: 16px;
+}
+
+/* Ensure the icon is centered vertically */
+.search-bar button svg {
+  vertical-align: middle;
 }
 
 .hamburger {
@@ -209,5 +228,6 @@
 .product-card p {
   color: black;
 }
+
 
     

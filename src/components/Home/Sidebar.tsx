@@ -1,6 +1,9 @@
-// Sidebar.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import './Style.css';
+import Category from './Category';
+import './Category.css'
+import SearchBar from './SearchBar';
+
 
 interface SidebarProps {
   isSidebarOpen: boolean;
@@ -8,6 +11,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
+  
   return (
     <div className="sidebar-container">
       <nav className="navbar">
@@ -20,14 +24,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <text x="0" y="35" fill="white" fontSize="35" fontFamily="Arial">
+              <text x="0" y="35" fill="black" fontSize="35" fontFamily="Arial">
                 Flopcart
               </text>
             </svg>
           </a>
         </div>
         <div className="nav-links">
-          {/* Add links here */}
+          <Category />
+          <SearchBar />
         </div>
         {!isSidebarOpen ? (
           <div className="hamburger" onClick={toggleSidebar}>
