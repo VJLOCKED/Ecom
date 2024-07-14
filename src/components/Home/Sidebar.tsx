@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Style.css';
-import Category from './Category';
+import Categories from './Categories';
 import './Category.css'
 import SearchBar from './SearchBar';
 
@@ -31,7 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, toggleSidebar }) => {
           </a>
         </div>
         <div className="nav-links">
-          <Category />
+          <Categories />
           <SearchBar />
         </div>
         {!isSidebarOpen ? (

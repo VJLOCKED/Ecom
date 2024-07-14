@@ -4,18 +4,9 @@
   justify-content: center;
   padding: 20px;
   background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
-.product-detail-content {
-  max-width: 800px;
-  margin-left: 20px;
-}
-
-.bor{
-  border:  solid black;
-  text-align: center;
-
-}
 /* Image Container */
 .image-container {
   flex: 1;
@@ -23,6 +14,7 @@
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product-image {
@@ -33,15 +25,16 @@
   cursor: pointer;
 }
 
-.product-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.image-container:hover .product-image {
+  transform: scale(1.1) translateY(-5px); /* Zoom and lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow when zoomed */
 }
 
 /* Details Container */
 .product-detail-content {
   flex: 2;
   max-width: 600px;
+  margin-left: 20px; /* Add margin for spacing between image and details */
 }
 
 .product-detail-content h2 {
@@ -63,26 +56,26 @@
   line-height: 1.6;
 }
 
-.product-detail-content .product-tags, 
-.product-detail-content .product-dimensions, 
+.product-detail-content .product-tags,
+.product-detail-content .product-dimensions,
 .product-detail-content .product-reviews {
   margin-bottom: 20px;
 }
 
-.product-detail-content .product-tags h3, 
-.product-detail-content .product-dimensions h3, 
+.product-detail-content .product-tags h3,
+.product-detail-content .product-dimensions h3,
 .product-detail-content .product-reviews h3 {
   font-size: 20px;
   color: #333;
   margin-bottom: 10px;
 }
 
-.product-detail-content .product-tags ul, 
+.product-detail-content .product-tags ul,
 .product-detail-content .product-reviews .review {
   padding-left: 20px;
 }
 
-.product-detail-content .product-tags li, 
+.product-detail-content .product-tags li,
 .product-detail-content .product-reviews .review {
   margin-bottom: 10px;
   font-size: 16px;
@@ -110,10 +103,15 @@
     margin-left: 0;
     margin-top: 20px;
     text-align: center;
+    max-width: 100%; /* Adjust maximum width for responsiveness */
   }
 
   .image-container {
     max-width: 100%;
+    margin-bottom: 20px; /* Add margin to separate image and details on small screens */
   }
 }
+
+
+
 

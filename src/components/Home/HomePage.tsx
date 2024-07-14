@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard';
 import Sidebar from './Sidebar';
 import './Style.css';
-import Category from './Category';
-
 interface Product {
   id: number;
   title: string;
@@ -61,8 +59,6 @@ const HomePage: React.FC = () => {
     <div className="app">
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
 
-      
-  
       <div className="product-list">
         {products.map((product) => (
           <Link key={product.id} to={`/product/${product.id}`}>
