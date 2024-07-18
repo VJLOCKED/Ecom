@@ -4,6 +4,7 @@ import HomePage from './components/Home/HomePage';
 import ProductDetail from './components/Home/ProductDetail';
 import Sidebar from './components/Home/Sidebar';
 import ProductsByCategory from './components/Home/ProductsByCategory';
+import SearchBar from './components/Home/SearchBar';
 
 const App: React.FC = () => {
   return (

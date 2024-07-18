@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import './ProductsByCategory.css'; // Assuming you have a CSS file for styling
+import Sidebar from './Sidebar';
 
 interface Product {
   id: number;
@@ -34,6 +35,13 @@ const ProductsByCategory: React.FC = () => {
   }, [categorySlug]);
 
   return (
+    <div>
+    <Sidebar
+    isSidebarOpen={false}
+    toggleSidebar={function (): void {
+      throw new Error('Function not implemented.');
+    }}
+  />
     <div className="products-container">
       <h2 className="category-title">{categorySlug}</h2>
       <div className="products-grid">
@@ -50,6 +58,7 @@ const ProductsByCategory: React.FC = () => {
           </Link>
         ))}
       </div>
+    </div>
     </div>
   );
 };
