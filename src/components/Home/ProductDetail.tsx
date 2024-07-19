@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ProductDetail.css';
 import Sidebar from './Sidebar';
-import AddToCart from './AddToCart'; // Import AddToCart component
+
 
 interface Product {
   id: number;
@@ -56,26 +56,17 @@ const ProductDetail: React.FC = () => {
       .catch((error) => console.error('Error fetching product:', error));
   }, [id]);
 
+
   if (!product) {
     return <div className="product-detail">Loading...</div>;
   }
 
   return (
     <div>
-      <Sidebar
-        isSidebarOpen={false}
-        toggleSidebar={() => {
-          throw new Error('Function not implemented.');
-        }}
-      />
+      <Sidebar isSidebarOpen={false} toggleSidebar={() => { }} />
       <div className="product-detail">
         <div className="image-container">
-          <img
-            src={product.thumbnail}
-            alt={product.title}
-            className="product-image"
-          />
-          <AddToCart productId={product.id} />
+          <img src={product.thumbnail} alt={product.title} className="product-image" />
         </div>
         <div className="product-detail-content">
           <h2>{product.title}</h2>
@@ -135,5 +126,3 @@ const ProductDetail: React.FC = () => {
 };
 
 export default ProductDetail;
-
-
