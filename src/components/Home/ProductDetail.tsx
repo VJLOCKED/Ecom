@@ -63,7 +63,7 @@ const ProductDetail: React.FC = () => {
 
   return (
     <div>
-      <Sidebar isSidebarOpen={false} toggleSidebar={() => { }} />
+      <Sidebar isSidebarOpen={false} toggleSidebar={() => { } } cartItemCount={0} />
       <div className="product-detail">
         <div className="image-container">
           <img src={product.thumbnail} alt={product.title} className="product-image" />
