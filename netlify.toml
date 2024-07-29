@@ -1,4 +1,4 @@
 [[redirects]]
 from = "*/"
-to = "HomePage.tsx"
+to = "App.tsx"
 status = 200
